@@ -19,7 +19,7 @@ public class AppDbInitializer
                         IsRead = false,
                         CoverUrl = "https://..",
                         DateAdded = DateTime.Now,
-                        Genre = "Tragedy"
+                        Genre = "Tragedy",
                     },
                     new Book()
                     {
@@ -31,7 +31,7 @@ public class AppDbInitializer
                         Rating = 5,
                         CoverUrl = "https://..",
                         DateAdded = DateTime.Now,
-                        Genre = "Tragedy"
+                        Genre = "Tragedy",
                     }
                 );
                 context.SaveChanges();

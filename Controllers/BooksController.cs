@@ -1,7 +1,6 @@
 namespace my_books_asp_net.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using my_books_asp_net.Data.Models;
 using my_books_asp_net.Data.Services;
 
