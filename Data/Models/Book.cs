@@ -12,4 +12,8 @@ public class Book
     public required string Author { get; set; }
     public DateTime DateAdded { get; set; }
     public required string Genre { get; set; }
+
+    // Navigation properties
+    public int PublisherId { get; set; }
+    public Publisher Publisher { get; set; }
 }
