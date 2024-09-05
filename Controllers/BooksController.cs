@@ -23,4 +23,11 @@ public class BooksController : ControllerBase
 
     [HttpGet("{id}")]
     public IActionResult GetBookById(int id) => Ok(_booksService.GetBookById(id));
+
+    [HttpPut("{id}")]
+    public IActionResult UpdateBook(int id, [FromBody] BookVM book)
+    {
+        var updatedBook = _booksService.UpdateBook(id, book);
+        return Ok(updatedBook);
+    }
 }
