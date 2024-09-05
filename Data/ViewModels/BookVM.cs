@@ -1,8 +1,5 @@
-namespace my_books_asp_net.Data.Models;
-
-class Book
+public class BookVM
 {
-    public int Id { get; set; }
     public required string Title { get; set; }
     public required string Description { get; set; }
     public bool IsRead { get; set; }
