@@ -1,5 +1,6 @@
 namespace my_books_asp_net.Data.Services;
 
+using System.Collections.Generic;
 using my_books_asp_net.Data;
 using my_books_asp_net.Data.Models;
 
@@ -31,4 +32,8 @@ public class BooksService
 
         return _book;
     }
+
+    public List<Book> GetAllBooks() => _context.Books.ToList();
+
+    public Book? GetBookById(int id) => _context.Books.FirstOrDefault(b => b!.Id == id);
 }

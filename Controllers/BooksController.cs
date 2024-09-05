@@ -16,8 +16,11 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
-    public Book AddBook([FromBody] BookVM book)
-    {
-        return _booksService.AddBook(book);
-    }
+    public IActionResult AddBook([FromBody] BookVM book) => Ok(_booksService.AddBook(book));
+
+    [HttpGet]
+    public IActionResult GetAllBooks() => Ok(_booksService.GetAllBooks());
+
+    [HttpGet("{id}")]
+    public IActionResult GetBookById(int id) => Ok(_booksService.GetBookById(id));
 }
