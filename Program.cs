@@ -1,15 +1,16 @@
 using System.Xml;
 using Microsoft.EntityFrameworkCore;
 using my_books_asp_net.Data;
+using my_books_asp_net.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<BooksService>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "my_books", Version = "v1" }));
+builder.Services.AddSwaggerGen();
 
 // Configure DbContext with sql
 var ConnectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");

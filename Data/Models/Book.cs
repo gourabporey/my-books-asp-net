@@ -1,6 +1,6 @@
 namespace my_books_asp_net.Data.Models;
 
-class Book
+public class Book
 {
     public int Id { get; set; }
     public required string Title { get; set; }
