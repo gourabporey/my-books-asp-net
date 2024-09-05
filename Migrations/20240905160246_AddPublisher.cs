@@ -15,25 +15,29 @@ namespace my_books_asp_net.Migrations
                 table: "Books",
                 type: "int",
                 nullable: false,
-                defaultValue: 0);
+                defaultValue: 0
+            );
 
             migrationBuilder.CreateTable(
                 name: "Publishers",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table
+                        .Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Publishers", x => x.Id);
-                });
+                }
+            );
 
             migrationBuilder.CreateIndex(
                 name: "IX_Books_PublisherId",
                 table: "Books",
-                column: "PublisherId");
+                column: "PublisherId"
+            );
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Books_Publishers_PublisherId",
@@ -41,7 +45,8 @@ namespace my_books_asp_net.Migrations
                 column: "PublisherId",
                 principalTable: "Publishers",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Cascade
+            );
         }
 
         /// <inheritdoc />
@@ -49,18 +54,14 @@ namespace my_books_asp_net.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_Books_Publishers_PublisherId",
-                table: "Books");
+                table: "Books"
+            );
 
-            migrationBuilder.DropTable(
-                name: "Publishers");
+            migrationBuilder.DropTable(name: "Publishers");
 
-            migrationBuilder.DropIndex(
-                name: "IX_Books_PublisherId",
-                table: "Books");
+            migrationBuilder.DropIndex(name: "IX_Books_PublisherId", table: "Books");
 
-            migrationBuilder.DropColumn(
-                name: "PublisherId",
-                table: "Books");
+            migrationBuilder.DropColumn(name: "PublisherId", table: "Books");
         }
     }
 }
