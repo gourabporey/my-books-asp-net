@@ -57,4 +57,15 @@ public class BooksService
 
         return bookToUpdate;
     }
+
+    public void DeleteBook(int id)
+    {
+        var bookToDelete = _context.Books.FirstOrDefault(b => b.Id == id);
+
+        if (bookToDelete != null)
+        {
+            _context.Books.Remove(bookToDelete);
+            _context.SaveChanges();
+        }
+    }
 }

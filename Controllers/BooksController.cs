@@ -1,7 +1,6 @@
 namespace my_books_asp_net.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using my_books_asp_net.Data.Models;
 using my_books_asp_net.Data.Services;
 
 [ApiController]
@@ -29,5 +28,12 @@ public class BooksController : ControllerBase
     {
         var updatedBook = _booksService.UpdateBook(id, book);
         return Ok(updatedBook);
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteBook(int id)
+    {
+        _booksService.DeleteBook(id);
+        return Ok();
     }
 }
