@@ -16,4 +16,6 @@ public class Book
     // Navigation properties
     public int PublisherId { get; set; }
     public Publisher Publisher { get; set; }
+
+    public List<Book_Author> BooksAuthors { get; set; }
 }
