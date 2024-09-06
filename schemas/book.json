@@ -1,0 +1,229 @@
+{
+  "id": "e62a71e-ab34-b722-d887-cc56440bf04",
+  "type": "object",
+  "valueType": "object",
+  "children": [
+    {
+      "id": "8a3f73c-2bb6-6fd-5d1b-15007fff1441",
+      "type": "value",
+      "valueType": "string",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "title",
+      "valueOptions": { "minLength": 0, "maxLength": "5", "unit": "word" },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "1fb57ef-27c2-a5c-bfa7-061e722cb4e7",
+      "type": "value",
+      "valueType": "string",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "description",
+      "valueOptions": { "minLength": 0, "maxLength": "25", "unit": "word" },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "b6aa23c-be1-724d-a8c-cb35baa8b283",
+      "type": "value",
+      "valueType": "bool",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "isRead",
+      "valueOptions": { "trueRatio": "50" },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "4dda7a-7582-6352-7d45-6e8cfb4402b8",
+      "type": "value",
+      "valueType": "dateTime",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "dateRead",
+      "valueOptions": {
+        "min": "2023-09-06",
+        "max": "2024-09-06",
+        "format": "iso"
+      },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "82c431-3a17-747-0867-284bb8706d",
+      "type": "value",
+      "valueType": "number",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "rating",
+      "valueOptions": {
+        "min": { "number": "0", "checked": true },
+        "max": { "number": "5", "checked": true },
+        "decimals": "0",
+        "multipleOf": "0"
+      },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "c054665-6ab-4244-b61-631f8dc1a6",
+      "type": "value",
+      "valueType": "url",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "coverUrl",
+      "valueOptions": {},
+      "nullValue": "0",
+      "selectedDependencies": {
+        "domainName": {
+          "fieldName": "Auto",
+          "indexPath": "*",
+          "fieldNamePath": [],
+          "id": null,
+          "displayPath": "*"
+        },
+        "companyName": {
+          "fieldName": "Auto",
+          "indexPath": "*",
+          "fieldNamePath": [],
+          "id": null,
+          "displayPath": "*"
+        },
+        "domainSuffix": {
+          "fieldName": "Auto",
+          "indexPath": "*",
+          "fieldNamePath": [],
+          "id": null,
+          "displayPath": "*"
+        }
+      }
+    },
+    {
+      "id": "c082d2-1bfa-42bb-08a2-ad57601676d",
+      "type": "value",
+      "valueType": "dateTime",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "dateAdded",
+      "valueOptions": {
+        "min": "2023-09-06",
+        "max": "2024-09-06",
+        "format": "iso"
+      },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "a3371e-13cb-74b5-a340-ce8be87a724",
+      "type": "oneOf",
+      "valueType": "oneOf",
+      "children": [
+        {
+          "id": "8c3ecf2-0e4-b5f5-52c1-82456a4647f",
+          "type": "value",
+          "valueType": "const",
+          "children": [],
+          "repeatCount": ["1", "100"],
+          "fieldName": "",
+          "valueOptions": { "text": "Horror" },
+          "nullValue": "0",
+          "selectedDependencies": {}
+        },
+        {
+          "id": "38817ef-6668-02b-a0-caa8843886e",
+          "type": "value",
+          "valueType": "constant",
+          "children": [],
+          "repeatCount": ["1", "100"],
+          "fieldName": "",
+          "valueOptions": { "text": "Comedy" },
+          "nullValue": "0",
+          "selectedDependencies": {}
+        },
+        {
+          "id": "0546edf-550c-7ba2-8c66-a205787b42d",
+          "type": "value",
+          "valueType": "constant",
+          "children": [],
+          "repeatCount": ["1", "100"],
+          "fieldName": "",
+          "valueOptions": { "text": "Tragedy" },
+          "nullValue": "0",
+          "selectedDependencies": {}
+        },
+        {
+          "id": "71f6114-eb74-0280-4a37-8d81d75bd44",
+          "type": "value",
+          "valueType": "constant",
+          "children": [],
+          "repeatCount": ["1", "100"],
+          "fieldName": "",
+          "valueOptions": { "text": "Autobiography" },
+          "nullValue": "0",
+          "selectedDependencies": {}
+        },
+        {
+          "id": "7587f23-bec-6a7-038f-0fbe718a515a",
+          "type": "value",
+          "valueType": "constant",
+          "children": [],
+          "repeatCount": ["1", "100"],
+          "fieldName": "",
+          "valueOptions": { "text": "Fiction" },
+          "nullValue": "0",
+          "selectedDependencies": {}
+        },
+        {
+          "id": "5e8b716-4b3e-5a64-e7d4-f7e8e08b10d5",
+          "type": "value",
+          "valueType": "constant",
+          "children": [],
+          "repeatCount": ["1", "100"],
+          "fieldName": "",
+          "valueOptions": { "text": "Poetry" },
+          "nullValue": "0",
+          "selectedDependencies": {}
+        }
+      ],
+      "repeatCount": ["1", "100"],
+      "fieldName": "genre",
+      "valueOptions": {},
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "bf34114-272d-fc1-5d41-6e48a17c70f",
+      "type": "value",
+      "valueType": "number",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "publisherId",
+      "valueOptions": {
+        "min": { "number": "0", "checked": true },
+        "max": { "number": "5", "checked": true },
+        "decimals": "0",
+        "multipleOf": "0"
+      },
+      "nullValue": "0",
+      "selectedDependencies": {}
+    },
+    {
+      "id": "87857c-45d0-0eb0-ce2-d24df81c08",
+      "type": "array",
+      "valueType": "array",
+      "children": [],
+      "repeatCount": ["1", "100"],
+      "fieldName": "authorIds",
+      "valueOptions": {},
+      "nullValue": "0",
+      "selectedDependencies": {}
+    }
+  ],
+  "repeatCount": ["1", "100"],
+  "fieldName": "",
+  "valueOptions": {},
+  "nullValue": "0",
+  "selectedDependencies": {}
+}
