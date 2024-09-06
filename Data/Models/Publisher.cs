@@ -6,5 +6,5 @@ public class Publisher
     public required string Name { get; set; }
 
     // Navigation properties
-    public required List<Book> Books { get; set; }
+    public List<Book>? Books { get; set; } = [];
 }
