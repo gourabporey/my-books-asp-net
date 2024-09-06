@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddTransient<BooksService>();
+builder.Services.AddTransient<AuthorsService>();
+builder.Services.AddTransient<PublishersService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
